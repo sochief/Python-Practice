@@ -2,6 +2,23 @@
 #browse, add, modify, delete or search for your contacts such as friends, family
 #and colleagues and their information such as email address and/or phone number.
 #Details must be stored for later retrieval.
+def startProg():
+    print("Welcome to the address-book!")
+def startSpeech():
+    print("Please, make your choise!",
+      "/n/n-------------------->Press 1 to browse the addres book",
+          "-------------------->Press 2 to add a contact",
+          "-------------------->Press 3 to modify a contact",
+          "-------------------->Press 4 to delete a contact",
+          "-------------------->Press 5 to search a contact")
+def byName_key(Person):
+    return Person.nameSurname
+def doNprint():
+    a = sorted(contaсt_list, key = byName_key)
+    print("\n\n\n\n\n\n\n\n\n\n\n\n")
+    for member in a:
+        member.introduceSelf() 
+        print("\n\n")
 class Person:
     def __init__(self,nameSurname,eMail,phone):
         self.nameSurname = nameSurname
@@ -50,18 +67,11 @@ class Colleague(Person):
              '\nE-mail address:'+self.eMail,
              '\nPhone number:'+self.phone+
                  '\nCategory: Collegues')
-jack = Friend('Jack',"jack@gmail.com","899877321")
-adam = Family('Adam',"adam@gmail.com","898761213")
-becky = Colleague("Becky","Becky state","9982718913")
+jack = Friend('Jack Sparrow',"jack@gmail.com","899877321")
+adam = Family('Adam Johnson',"adam@gmail.com","898761213")
+becky = Colleague("Becky Mouse","Becky state","9982718913")
 contaсt_list =[]
 contaсt_list.append(jack)
 contaсt_list.append(adam)
 contaсt_list.append(becky)
-
-def byName_key(Person):
-    return Person.nameSurname
-contaсt_list = sorted(contaсt_list, key = byName_key)
-print("\n\n\n\n\n\n\n\n\n\n\n\n")
-for member in contaсt_list:
-    member.introduceSelf() 
-    print("\n\n")
+doNprint()
