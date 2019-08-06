@@ -75,12 +75,12 @@ class Colleague(Person):
              '\nPhone number:'+self.phone+
                  '\nCategory: Collegues')
 #                                                            Checklist
-jack = Friend('Jack Sparrow',"jack@gmail.com","899877321")
-adam = Family('Adam Johnson',"adam@gmail.com","898761213")
-becky = Colleague("Becky Mouse ","Becky state","9982718913")
-contaсt_list.append(jack)
-contaсt_list.append(adam)
-contaсt_list.append(becky)
+#jack = Friend('Jack Sparrow',"jack@gmail.com","899877321")
+#adam = Family('Adam Johnson',"adam@gmail.com","898761213")
+#becky = Colleague("Becky Mouse ","Becky state","9982718913")
+#contaсt_list.append(jack)
+#contaсt_list.append(adam)
+#contaсt_list.append(becky)
 
 #end of functions list
 #algo for the main part

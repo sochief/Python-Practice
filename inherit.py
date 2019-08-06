@@ -31,3 +31,4 @@ print()
 members = [t,s]
 for member in members:
     member.tell()
+#ti pidor
