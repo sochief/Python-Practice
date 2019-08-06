@@ -1,21 +1,28 @@
+#check
+import time
+contaсt_list =[]
 #Create your own command-line address-book program using which you can
 #browse, add, modify, delete or search for your contacts such as friends, family
 #and colleagues and their information such as email address and/or phone number.
 #Details must be stored for later retrieval.
 def startProg():
-    print("Welcome to the address-book!")
+    print("\n\n\n\n\nWelcome to the address-book!",
+          "\n\n\n\n\nPlease make your choice :)")
 def startSpeech():
-    print("Please, make your choise!",
-      "/n/n-------------------->Press 1 to browse the addres book",
-          "-------------------->Press 2 to add a contact",
-          "-------------------->Press 3 to modify a contact",
-          "-------------------->Press 4 to delete a contact",
-          "-------------------->Press 5 to search a contact")
+    print("\n\n-------------------->Press 1 to browse the addres book"+
+          "\n-------------------->Press 2 to add a contact"+
+          "\n-------------------->Press 3 to modify a contact"+
+          "\n-------------------->Press 4 to delete a contact"+
+          "\n-------------------->Press 5 to search a contact")
+    time.sleep(2)
 def byName_key(Person):
     return Person.nameSurname
+def byEmail_key(Person):
+    return Person.eMail
+def byPhoneNumber_key(Person):
+    return Person.phone
 def doNprint():
     a = sorted(contaсt_list, key = byName_key)
-    print("\n\n\n\n\n\n\n\n\n\n\n\n")
     for member in a:
         member.introduceSelf() 
         print("\n\n")
@@ -67,11 +74,42 @@ class Colleague(Person):
              '\nE-mail address:'+self.eMail,
              '\nPhone number:'+self.phone+
                  '\nCategory: Collegues')
+#                                                            Checklist
 jack = Friend('Jack Sparrow',"jack@gmail.com","899877321")
 adam = Family('Adam Johnson',"adam@gmail.com","898761213")
-becky = Colleague("Becky Mouse","Becky state","9982718913")
-contaсt_list =[]
+becky = Colleague("Becky Mouse ","Becky state","9982718913")
 contaсt_list.append(jack)
 contaсt_list.append(adam)
 contaсt_list.append(becky)
-doNprint()
+
+#end of functions list
+#algo for the main part
+
+startProg()
+exit = True
+while exit != False:
+    startSpeech()
+    choice = input("Your choice: ")
+    if choice == 1:
+        print("You have decided to browse an address book, here you are")
+        doNprint()
+        break
+    elif choice == 2:
+       print("You have decided to add a new contact to the address book")
+       doNprint()
+       break
+    elif choice == 3:
+        print("You hace decided to modify a contact")
+        break
+    elif choice == 4:
+        print("You hace decided to delete a contact")
+        break
+    elif choice == 5:
+        print("You have decided to search a contact")
+        break
+    elif choice == 6:
+        print("You have decided to quit, thank you for using me!")
+        time.sleep(3)
+        exit = False
+
+    
